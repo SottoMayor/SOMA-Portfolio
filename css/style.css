@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Inserir a fonte...*/
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas:
+    'grid-header'
+    'grid-main'
+    'grid-footer';
+}
+
+.grid-header{
+    grid-area: grid-header;
+    background-color: gray;
+}
+
+
+/*-----------------------------------------------*/
+.grid-main{
+    grid-area: grid-main;
+    background-color: chartreuse;
+}
+
+
+/*-----------------------------------------------*/
+.grid-footer{
+    grid-area: grid-footer;
+    background-color: cornflowerblue;
+}
