@@ -27,6 +27,12 @@
     background-color: chartreuse;
 }
 
+.aside{
+    background-color: rgb(129, 190, 129);
+    max-width: 300px;
+    height: 100%;
+    box-shadow: 0px 0px 5px black;
+}
 
 /*-----------------------------------------------*/
 .grid-footer{
