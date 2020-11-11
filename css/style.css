@@ -93,7 +93,58 @@
     text-decoration: none;
     font-size: 25px;
     color: white;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.5s;
+    padding: 5px 10px;
 }
+
+.aside-nav a:hover{
+    background-color: white;
+    color: black;
+}
+
+.aside-nav a:before{
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    /*background-color: blue;*/
+    border: 3px solid white;
+    border-width: 0 0 3px 3px ;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.aside-nav a:hover:before{
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+.aside-nav a:after{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    /*background-color: blue;*/
+    border: 3px solid white;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.aside-nav a:hover:after{
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
+
+
 
 /*-----------------------------------------------*/
 .grid-footer{

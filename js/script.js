@@ -5,25 +5,38 @@ $(document).ready(function () {
         botar seletores em variáveis e sistema de desmarcação no body
     */
 
-    $('#check').change(function() {
+    //Execute Menu
+    menu();
+    
 
-        var checked = $('#check').is(':checked');
-        console.log(checked);
+    //Stick Naviagtion
+    
 
+});
+
+function menu() {
+
+    var check = $('#check');
+
+    check.change(function() {
+
+        var checked = check.is(':checked');
+        var abrir = $('.abrir');
+        var fechar = $('.fechar');
+        var aside = $('.aside');
+
+        // Icon Change
         if(checked){
-            $('.abrir').delay('slow').fadeIn();
-            $('.fechar').delay().fadeOut('slow');
+            abrir.delay('slow').fadeIn();
+            fechar.delay().fadeOut('slow');
         }else{
-            $('.abrir').delay().fadeOut('slow');
-            $('.fechar').delay('slow').fadeIn();
+            abrir.delay().fadeOut('slow');
+            fechar.delay('slow').fadeIn();
         }       
 
-        $('.aside').animate({width:'toggle'}, 'slow');        
+        // Animate Aside
+        aside.animate({width:'toggle'}, 'slow');        
 
+    });
 
-
-    })
-
-
-
-})
+};
