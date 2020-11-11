@@ -8,7 +8,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-rows: auto 70vh 10vh;
     grid-template-areas:
     'grid-header'
     'grid-main'
@@ -17,9 +17,48 @@
 
 .grid-header{
     grid-area: grid-header;
-    background-color: gray;
+    background: url('../imagens/header_bg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 35vh;
+    display: flex;
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 150px;
+    height: 100px;
+}
+
+.icon-menu i{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.icon-menu .fechar, .icon-menu #check{
+    display: none;
+}
+
+.stickNavigation{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.stickNavigation i{
+    color: black;
+}
 
 /*-----------------------------------------------*/
 .grid-main{
@@ -28,10 +67,32 @@
 }
 
 .aside{
-    background-color: rgb(129, 190, 129);
+    background-color: black;
     max-width: 300px;
     height: 100%;
-    box-shadow: 0px 0px 5px black;
+    display: none;
+}
+
+.aside-nav header{
+    font-size: 45px;
+    color: white;
+    padding: 20px 0;
+    padding-left: 35%;
+    border-bottom: 2px solid white;
+    cursor: default;
+}
+
+.aside-nav li{
+    list-style-type: none;
+    padding: 30px 0;
+    padding-left: 35%;
+    border-bottom: 1px solid gray;
+}
+
+.aside-nav a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
 }
 
 /*-----------------------------------------------*/
