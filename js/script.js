@@ -10,7 +10,7 @@ $(document).ready(function () {
     
 
     //Stick Naviagtion
-    
+    atvStickNavigation();
 
 });
 
@@ -36,6 +36,24 @@ function menu() {
 
         // Animate Aside
         aside.animate({width:'toggle'}, 'slow');        
+
+    });
+
+};
+
+
+function atvStickNavigation(){
+
+    $(window).scroll(function() {
+
+        var windowTop = $(window).scrollTop();
+        var stickNavigation = $('.stickNavigation');
+
+        if(windowTop > 300){
+            stickNavigation.stop().fadeIn('slow');
+        }else{
+            stickNavigation.stop().fadeOut('slow');
+        }
 
     });
 
