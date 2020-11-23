@@ -241,10 +241,32 @@
 
 .equipe{
     padding: 15px 0;
+    position: relative;
 }
 
-.slider-equipe{
-    display: none;
+.descricao-equipe img{
+    display: block;
+    margin: 0 auto;
+}
+
+.arrow-prev{
+    position: absolute;
+    top: 40%;
+    left: calc(-3% + 15px);
+    transform: rotateY(-40%);
+}
+
+.arrow-next{
+    position: absolute;
+    top: 40%;
+    right: calc(-3% + 15px);
+    transform: rotateY(-40%);
+}
+
+.arrow-prev span, .arrow-next span{
+    color: black;
+    font-size: 42px;
+    cursor: pointer;
 }
 
 .descricao-equipe{
@@ -301,6 +323,9 @@
         text-align: center;
     }
 
+    .arrow-prev span, .arrow-next span{
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -310,3 +335,19 @@
     /*Arrumar o tamanho das imagens!!!!!! (SOBRE)*/
 
 }
+
+/*SLIDER HIDE*/
+@media screen and (max-width: 595px){
+
+    /*-----------------------------------------------*/
+    .grid-main{
+        grid-area: grid-main;
+    }
+
+    .equipe{
+        display: none;
+    }
+    
+
+}
+

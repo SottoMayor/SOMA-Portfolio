@@ -13,7 +13,10 @@ $(document).ready(function () {
     atvStickNavigation();
 
     //slider Equipe
+    
     $('.slider-equipe').slick({
+        prevArrow:'.arrow-prev',
+        nextArrow:'.arrow-next',
         dots: true,
         speed: 1000,
         infinite: true,
