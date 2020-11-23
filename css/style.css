@@ -167,12 +167,12 @@
     padding-bottom: 10px;
 }
 
-#sobre h4{
+.ej h4{
     font-size: 27px;
     padding-bottom: 10px;
 }
 
-#sobre p{
+.ej p{
     font-size: 20px;
     max-width: 650px;
     text-align: justify;
@@ -228,7 +228,9 @@
 }
 
 .caption p{
-    font-size: 18px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 2%;
 }
 
 .card-sobre-flex:hover .caption{
