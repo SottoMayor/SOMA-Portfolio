@@ -12,6 +12,32 @@ $(document).ready(function () {
     //Stick Naviagtion
     atvStickNavigation();
 
+    //slider Equipe
+    $('.slider-equipe').slick({
+        dots: true,
+        speed: 1000,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay:true,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                mobileFirst:true
+              }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              } 
+          ]
+    });
+
 });
 
 function menu() {
