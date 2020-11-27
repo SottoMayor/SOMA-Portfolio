@@ -52,19 +52,21 @@ function menu() {
         var checked = check.is(':checked');
         var abrir = $('.abrir');
         var fechar = $('.fechar');
-        var aside = $('.aside');
+        var menu = $('.menu');
+        var menuNavigation = $('.menu-navigation');
 
         // Icon Change
         if(checked){
             abrir.delay('slow').fadeIn();
             fechar.delay().fadeOut('slow');
+            menu.css('left', '-300px');
         }else{
             abrir.delay().fadeOut('slow');
             fechar.delay('slow').fadeIn();
+            menu.css('left', '0');
         }       
-
-        // Animate Aside
-        aside.animate({width:'toggle'}, 'slow');        
+     
+        menuNavigation.slideToggle('slow');
 
     });
 
@@ -78,7 +80,7 @@ function atvStickNavigation(){
         var windowTop = $(window).scrollTop();
         var stickNavigation = $('.stickNavigation');
 
-        if(windowTop > 300){
+        if(windowTop > 350){
             stickNavigation.stop().fadeIn('slow');
         }else{
             stickNavigation.stop().fadeOut('slow');

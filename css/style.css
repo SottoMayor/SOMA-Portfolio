@@ -8,7 +8,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 10vh;
+    grid-template-rows: 100vh auto 10vh;
     grid-template-areas:
     'grid-header'
     'grid-main'
@@ -17,7 +17,7 @@
 
 .grid-header{
     grid-area: grid-header;
-    background: url('../imagens/header_bg.png');
+    background: url('../imagens/chalkboard_bg.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -53,10 +53,10 @@
     left: 0;
     width: 100%;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
-    background-image: url('../imagens/blackboard_bg.jpg');
+    background-color: black;
     background-position: center;
     background-size: cover;
-    padding: 25px 0;
+    padding: 20px 0;
     z-index: 10;
     display: none;
 }
@@ -78,38 +78,64 @@
     padding-bottom: 10px;
 }
 
-/*-----------------------------------------------*/
-.grid-main{
-    grid-area: grid-main;
-    padding: 15px 0;
-}
-
-.aside{
-    background-color: black;
-    max-width: 300px;
+.menu-navigation{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    background-image: url('../imagens/blackboard_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
     display: none;
-    z-index: 100;
+    z-index: 2;
+    text-align: left;
 }
 
-.aside-nav header{
-    font-size: 45px;
+.menu{
+    position: absolute;
+    top: 0;
+    left: -300px;
+    background-image: url('../imagens/blackboard_bg.jpg');
+    background-position: bottom;
+    background-size: cover;
+    width: 300px;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    text-align: center;
+    transition: 0.7s;
+}
+
+.menu .menu-nav header{
+    font-size: 50px;
+    padding: 25px 0;
+}
+
+.menu-nav header{
+    font-size: 40px;
     color: white;
-    padding: 20px 0;
-    padding-left: 35%;
-    border-bottom: 2px solid white;
+    padding: 15px 0;
+    border-bottom: 3px solid white;
     cursor: default;
 }
 
-.aside-nav li{
-    list-style-type: none;
-    padding: 30px 0;
-    padding-left: 35%;
-    border-bottom: 1px solid gray;
+.menu .menu-nav li{
+    padding: 25px 0;
 }
 
-.aside-nav a{
-    text-decoration: none;
+.menu-nav li{
+    list-style-type: none;
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+}
+
+.menu .menu-nav a{
     font-size: 25px;
+}
+
+.menu-nav a{
+    text-decoration: none;
+    font-size: 22px;
     color: white;
     text-transform: uppercase;
     position: relative;
@@ -117,12 +143,12 @@
     padding: 5px 10px;
 }
 
-.aside-nav a:hover{
+.menu-nav a:hover{
     background-color: white;
     color: black;
 }
 
-.aside-nav a:before{
+.menu-nav a:before{
     content: '';
     position: absolute;
     bottom: 12px;
@@ -136,13 +162,13 @@
     transition: all 0.3s;
 }
 
-.aside-nav a:hover:before{
+.menu-nav a:hover:before{
     opacity: 1;
     bottom: -8px;
     left: -8px;
 }
 
-.aside-nav a:after{
+.menu-nav a:after{
     content: '';
     position: absolute;
     top: 12px;
@@ -156,10 +182,16 @@
     transition: all 0.3s;
 }
 
-.aside-nav a:hover:after{
+.menu-nav a:hover:after{
     opacity: 1;
     top: -8px;
     right: -8px;
+}
+
+/*-----------------------------------------------*/
+.grid-main{
+    grid-area: grid-main;
+    padding: 15px 0;
 }
 
 #sobre h2{
