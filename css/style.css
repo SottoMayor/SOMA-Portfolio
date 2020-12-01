@@ -38,7 +38,7 @@
 
 .icon-menu i{
     color: white;
-    font-size: 50px;
+    font-size: 75px;
     cursor: pointer;
     z-index: 10;
 }
@@ -194,9 +194,14 @@
     padding: 15px 0;
 }
 
+#sobre{
+    background: linear-gradient(135deg, rgba(194, 190, 190, 0.479), whitesmoke);
+    margin-top: -15px;
+}
+
 #sobre h2{
     font-size: 40px;
-    padding-bottom: 10px;
+    padding: 15px 0;
 }
 
 .ej h4{
@@ -212,7 +217,7 @@
 }
 
 #sobre .card-sobre img{
-    width: 100%;
+    width: 75%;
     height: 250px;
     display: block;
     margin: 0 auto;
@@ -223,13 +228,15 @@
     justify-content: flex-start;
     padding: 0px;
     margin: 0 25px 25px 25px;
-    transition: all 0.5s;
+    transition: all 0.7s;
+    box-shadow: 0 0 6px black;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: default;
 }
 
 .card-sobre{
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 6px black;
 }
 
 .card-sobre h4{
@@ -249,9 +256,10 @@
     justify-content: center;
     align-items: center;
     color: white;
-    opacity: 0;
     transition: all 0.5s;
     border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
 }
 
 .caption h2{
@@ -266,11 +274,7 @@
 }
 
 .card-sobre-flex:hover .caption{
-    opacity: 1;
-}
-
-.card-sobre-flex:hover{
-    transform: rotate(5deg);
+    transform: translateX(0);
 }
 
 .equipe{
@@ -317,7 +321,25 @@
     text-align: center;
 }
 
+#servicos h2{
+    font-size: 40px;
+    padding: 15px 0;
+}
 
+#servicos .servicos-flex-wrapper{
+    box-shadow: 0 0 6px black;
+    border-radius: 8px;
+}
+
+#servicos .servicos-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicos .servicos-flex .card{
+    width: 100%;
+}
 
 /*-----------------------------------------------*/
 .grid-footer{
@@ -332,11 +354,13 @@
         grid-area: grid-main;
     }
 
-    #sobre img{
-        width: 55%;
+    #sobre .card-sobre img{
+        width: 50%;
         height: 250px;
-        display: block;
-        margin: 0 auto;
+    }
+
+    .card-sobre h4{
+        font-size: 35px;
     }
 
     .card-sobre-flex{
@@ -360,13 +384,41 @@
     .arrow-prev span, .arrow-next span{
         font-size: 35px;
     }
+
+    #servicos .servicos-flex{
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    #servicos .servicos-flex-wrapper{
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    #servicos .servicos-flex .card{
+        margin-bottom: 20px;
+        box-shadow: 0 0 6px black;
+
+    }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 768px){
 
 
+    /*-----------------------------------------------*/
+    .grid-main{
+        grid-area: grid-main;
+    }
 
-    /*Arrumar o tamanho das imagens!!!!!! (SOBRE)*/
+    #sobre .card-sobre img{
+        width: 45%;
+        height: 250px;
+    }
+    
+    .card-sobre h4{
+        font-size: 25px;
+    }
 
 }
 
