@@ -337,7 +337,7 @@
 }
 
 #servicos .servicos-flex-wrapper{
-    box-shadow: 0 0 6px black;
+    box-shadow: 0 0 35px 5px black;
     border-radius: 8px;
 }
 
@@ -352,6 +352,18 @@
     border-left: 5px solid lightgray;
     border-radius: 0 !important;
     outline: 10px solid white;
+}
+
+#contato{
+    background-color: chartreuse;
+}
+
+#contato .localization-container{
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-color: white;
+    outline: 10px solid rgba(255, 255, 255, 0.65);
 }
 
 /*-----------------------------------------------*/
