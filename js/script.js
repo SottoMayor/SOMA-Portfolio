@@ -41,6 +41,16 @@ $(document).ready(function () {
           ]
     });
 
+    //Dynamic Scroll
+    dynamicScroll();
+
+
+
+    //Email Block
+    emailBlock();
+
+
+
 });
 
 function menu() {
@@ -88,4 +98,35 @@ function atvStickNavigation(){
 
     });
 
+};
+
+
+function dynamicScroll(){
+
+    var scrollTrigger = $('nav a');
+    var menuNavigation = $('.menu-navigation');
+
+    scrollTrigger.click(function() {
+
+        var href = $(this).attr('href');
+        var scrollTopElement = $(href).offset().top;
+
+        $('html, body').animate({
+            'scrollTop': scrollTopElement,
+        }, 1500);
+
+    });
+
+};
+
+function emailBlock(){
+
+    var targetEmailBlock = $('.email-block');
+    var activeEmailBlock = $('.active-email-block');
+
+    activeEmailBlock.click(function() {
+
+        targetEmailBlock.fadeToggle('slow');
+
+    });
 };

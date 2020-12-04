@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*Inserir a fonte...*/
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .grid-container{
@@ -144,6 +144,7 @@
 }
 
 .menu-nav a:hover{
+    padding: 7px;
     background-color: white;
     color: black;
 }
@@ -450,21 +451,21 @@ form .form-group:nth-of-type(4) .icon-position i{
 }
 
 .footer-redes-sociais a, .footer-redes-sociais span{
-    padding: 10px 45px;
+    padding: 10px 55px;
     margin-right: 20px;
     text-decoration: none;
     background-color: #f1c40f;
     color: white;
     position: relative;
     top: 10px;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .footer-redes-sociais i{
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .footer-redes-sociais a:before, .footer-redes-sociais span:before{
@@ -500,7 +501,7 @@ form .form-group:nth-of-type(4) .icon-position i{
     justify-content: center;
     align-items: center;
     transform: rotateX(270deg);
-    transform-origin: bottom;
+    transform-origin: top;
     transition: all 1.5s;
     transition-delay: 1s;
     border-radius: 10px;
@@ -513,6 +514,7 @@ form .form-group:nth-of-type(4) .icon-position i{
 .footer-redes-sociais .email-block{
     margin-top: 20px;
     font-size: 15px;
+    font-weight: 800;
     display: none;
 }
 
@@ -572,7 +574,7 @@ form .form-group:nth-of-type(4) .icon-position i{
 
     #servicos .servicos-flex .card{
         box-shadow: 0 0 6px black;
-        margin-right: 0px;
+        margin-right: 0px !important;
         margin-bottom: 50px !important;
     }
 
@@ -588,10 +590,29 @@ form .form-group:nth-of-type(4) .icon-position i{
 
 @media screen and (max-width: 768px){
 
+    h2{
+        font-size: 33px !important;
+    }
+
+    h4{
+        font-size: 23px !important;
+    }
+
+    p{
+        font-size: 18px !important;
+    }
+
+    /*----------------------------------------------*/
+
+    .grid-header{
+        grid-area: grid-header;
+        text-align: center;
+    }
 
     /*-----------------------------------------------*/
     .grid-main{
         grid-area: grid-main;
+        text-align: center;
     }
 
     #sobre .card-sobre img{
@@ -601,6 +622,20 @@ form .form-group:nth-of-type(4) .icon-position i{
     
     .card-sobre h4{
         font-size: 25px;
+    }
+
+    #contato form{
+        text-align: left !important;
+    }
+
+    /*-----------------------------------------------*/
+    .grid-footer{
+        grid-area: grid-footer;
+        text-align: center;
+    }
+
+    .flex-box{
+        justify-content: center;
     }
 
 }
