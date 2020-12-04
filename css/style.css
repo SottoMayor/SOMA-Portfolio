@@ -8,7 +8,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto 10vh;
+    grid-template-rows: 100vh auto auto;
     grid-template-areas:
     'grid-header'
     'grid-main'
@@ -349,27 +349,176 @@
 
 #servicos .servicos-flex .card{
     width: 100%;
-    border-left: 5px solid lightgray;
     border-radius: 0 !important;
     outline: 10px solid white;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px 15px rgba(0,0,0,0.75) !important;
+}
+
+.card button, .card button:hover{
+    color: white;
 }
 
 #contato{
-    background-color: chartreuse;
+    background: linear-gradient(135deg, rgba(194, 190, 190, 0.479), rgb(155, 151, 151));
+    padding: 25px 0;
+}
+
+#contato h2{
+    font-size: 40px;
+    padding: 15px 0 30px 0;
+}
+
+#contato form{
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+#contato form input, #contato form textarea{
+    width: 97%;
+    padding: 8px 45px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 6px 7px 12px -1px rgba(0,0,0,0.75);
+    outline: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+#contato form input:focus, #contato form textarea:focus{
+    box-shadow: 0 0 10px 5px whitesmoke;
+}
+
+#contato form input[type='submit']{
+    max-width: 200px;
+    background: linear-gradient(215deg,  gold, #f1c40f, #f1c40f);
+    cursor: pointer;
+    border-bottom: 6px solid rgb(129, 110, 2);
+    font-size: 20px;
+    color: white;
+}
+
+#contato form input[type='submit']:hover{
+    background: linear-gradient(215deg, #f1c40f, gold, gold);
+}
+
+form .icon-position{
+    position: relative;
+}
+
+form .icon-position i{
+    position: absolute;
+    left: 13px;
+    top: -40px;
+    color: #aaa;
+    font-size: 25px;
+}
+
+form .form-group:nth-of-type(3) .icon-position i{
+    position: absolute;
+    left: 16px;
+}
+
+form .form-group:nth-of-type(4) .icon-position i{
+    position: absolute;
+    top: -290px;
 }
 
 #contato .localization-container{
     width: 100%;
-    max-width: 500px;
-    height: 400px;
+    height: 600px;
     background-color: white;
-    outline: 10px solid rgba(255, 255, 255, 0.65);
+    padding-bottom: 15px;
 }
 
 /*-----------------------------------------------*/
 .grid-footer{
     grid-area: grid-footer;
-    background-color: cornflowerblue;
+    background-color: rgb(228, 225, 225);
+    margin-top: -15px;
+    padding: 37px 0;
+}
+
+.footer-text{
+    margin-bottom: 5px;
+}
+
+.footer-redes-sociais .flex-box{
+    display: flex;
+}
+
+.footer-redes-sociais a, .footer-redes-sociais span{
+    padding: 10px 45px;
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: #f1c40f;
+    color: white;
+    position: relative;
+    top: 10px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer-redes-sociais i{
+    font-size: 40px;
+}
+
+.footer-redes-sociais a:before, .footer-redes-sociais span:before{
+    content: 'SomaJr';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2ce771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 1s;
+    border-radius: 10px;
+}
+
+.footer-redes-sociais a:hover:before, .footer-redes-sociais span:hover:before{
+    transform: rotate(0);
+}
+
+.footer-redes-sociais a:after, .footer-redes-sociais span:after{
+    content: 'Acesse!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: bottom;
+    transition: all 1.5s;
+    transition-delay: 1s;
+    border-radius: 10px;
+}
+
+.footer-redes-sociais a:hover:after, .footer-redes-sociais span:hover:after{
+    transform: rotate(0);
+}
+
+.footer-redes-sociais .email-block{
+    margin-top: 20px;
+    font-size: 15px;
+    display: none;
+}
+
+.footer-redes-sociais .email-block i{
+    font-size: 15px;
+    margin-right: 5px;
 }
 
 @media screen and (max-width: 992px){
@@ -422,9 +571,18 @@
     }
 
     #servicos .servicos-flex .card{
-        margin-bottom: 35px;
         box-shadow: 0 0 6px black;
+        margin-right: 0px;
+        margin-bottom: 50px !important;
+    }
 
+    #servicos .servicos-flex .card{
+        width: 100%;
+        border-radius: 0 !important;
+        outline: 10px solid white;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 10px 15px rgba(0,0,0,0.75) !important;
     }
 }
 
